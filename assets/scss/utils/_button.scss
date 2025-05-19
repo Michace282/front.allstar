@@ -1,0 +1,51 @@
+.btn{
+  max-width: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $gold;
+  letter-spacing: 0.07em;
+  background: rgba(238, 198, 148, 0.05);
+  border: 1px solid rgba(238, 198, 148, 0.2);
+  box-sizing: border-box;
+  backdrop-filter: blur(20px);
+  border-radius: 1px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  @include mmax(1199){
+    max-width: 190px;
+    font-size: 13px;
+    line-height: 15px;
+    height: 48px;
+  }
+  @include  mmax(767){
+    max-width: 180px;
+    height: 44px;
+  }
+
+  &:before{
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+    content: '';
+    //color: #000 !important;
+    background:RGBA(238,198,148,1);
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)
+  }
+  &:hover{
+    //border: 1px solid rgba(238, 198, 148, 0.8);
+    color: #060C22;
+
+    &:before{
+      top: 0%;
+      bottom: auto;
+      height: 100%;
+    }
+  }
+}

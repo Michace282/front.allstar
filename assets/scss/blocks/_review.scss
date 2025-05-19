@@ -1,0 +1,158 @@
+.review {
+  padding-top: 20px;
+  padding-bottom: 33px;
+
+  //.agile {
+  //  margin-left: -15px;
+  //  margin-right: -15px;
+  //}
+  //
+  //.agile__list {
+  //  padding: 15px 0;
+  //}
+
+  .flicking-viewport{
+    padding-bottom: 15px;
+  }
+  .wrap {
+    display: flex;
+    flex: 1;
+    @include mmax(767) {
+      flex-direction: column;
+      flex: none;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__more {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+    display: block;
+    margin-left: auto;
+    margin-right: 50px;
+    color: #0d253e;
+    transition: all .3s;
+
+    &:hover {
+      color: $gold;
+    }
+
+    @include mmax(991) {
+      margin: 0;
+    }
+  }
+
+  &__slide {
+    max-width: 50%;
+    width: 100% !important;
+    @include mmax(991){
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+
+  }
+
+  &__wrap {
+    padding: 44px 50px 75px 45px;
+    box-shadow: 8px 9px 11px rgb(0 0 0 / 8%);
+    background-color: #fff;
+    border-radius: 20px;
+    @include mmax(991) {
+      padding: 40px;
+    }
+    @include mmax(374) {
+      padding: 40px 10px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__header {
+    display: flex;
+    margin-bottom: 13px;
+  }
+
+  &__no-avatar {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    background: #f1f1f1;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+
+  &__slide {
+    padding: 0 15px;
+  }
+
+  &__content {
+    font-size: 15px;
+    line-height: 27px;
+
+    + .review__btn-show {
+      .hide {
+        display: block
+      }
+
+      .show-content {
+        display: none
+      }
+    }
+
+    &.cut-text {
+      max-height: 110px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      + .review__btn-show {
+        .hide {
+          display: none
+        }
+
+        .show-content {
+          display: block
+        }
+      }
+    }
+  }
+
+  &__btn-show {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: #0d253e;
+    font-size: 14px;
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $gold;
+    }
+  }
+
+  &__slider{
+    //.agile__slides{
+    //  align-items: normal;
+    //}
+  }
+
+
+
+}

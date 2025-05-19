@@ -1,0 +1,54 @@
+@mixin mmax($width, $height: 0) {
+  $w: $width + px;
+  $h: $height + px;
+
+  @if $height==0 {
+    @media all and (max-width: $w) {
+      @content;
+    }
+  } @else {
+    @media all and (max-width: $w) and (max-height: $h) {
+      @content;
+    }
+  }
+}
+
+@mixin adaptive($width){
+  @media only screen and (min-width: $width){
+    @content
+  }
+}
+
+
+@mixin scroll {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #E4E6EC;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #323a6d;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #323a6d;
+  }
+}
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    font-display: swap; // Uncomment to initially display system fonts
+    src: local($fname), url($furl) format("woff2");
+  }
+}

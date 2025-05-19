@@ -1,0 +1,125 @@
+$btn-burger-color: #EEC694;
+$height-burger-line: 3px;
+$width-burger-line: 24px;
+$height-burger-btn: 21px;
+$indent-burger-line: -10px;
+$radius-burger-line: 10px;
+
+
+.burger-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .burger-mobile-box {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: $width-burger-line;
+    height: $height-burger-btn;
+    &:before {
+      display: block;
+      content: '';
+      top: 50%;
+      right: 0;
+      margin-top: -2px;
+      position: absolute;
+      width: 5px;
+      height: $height-burger-line;
+      transition-timing-function: ease;
+      transition-duration: .15s;
+      transition-property: transform;
+      border-radius: $radius-burger-line;
+      background-color: #FFFFFF;
+    }
+  }
+
+  .burger-mobile-line {
+    position: absolute;
+    width: 15px;
+    height: $height-burger-line;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: $radius-burger-line;
+    background-color: $btn-burger-color;
+    top: 50%;
+    display: block;
+    margin-top: -2px;
+
+    &:before {
+      display: block;
+      content: '';
+      top: $indent-burger-line;
+      position: absolute;
+      width: $width-burger-line;
+      height: $height-burger-line;
+      transition-timing-function: ease;
+      transition-duration: .15s;
+      transition-property: transform;
+      border-radius: $radius-burger-line;
+      background-color: $btn-burger-color;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      bottom: $indent-burger-line;
+      position: absolute;
+      width: $width-burger-line;
+      height: $height-burger-line;
+      transition-timing-function: ease;
+      transition-duration: .15s;
+      transition-property: transform;
+      border-radius: $radius-burger-line;
+      background-color: $btn-burger-color;
+    }
+  }
+}
+
+.active-mobile-btn {
+  .burger-mobile-box{
+    &:before{
+      content: none;
+    }
+  }
+  .burger-mobile-line {
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+    transform: rotate(45deg);
+    width: $width-burger-line;
+
+    &:after {
+      bottom: 0;
+      transition: bottom 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) .12s;
+      transform: rotate(-90deg);
+    }
+
+    &:before {
+      top: 0;
+      transition: top 75ms ease, opacity 75ms ease .12s;
+      opacity: 0;
+    }
+  }
+}
+
+//.overlay-menu-header {
+//  position: fixed;
+//  z-index: 15;
+//  top: 0;
+//  bottom: 0;
+//  right: 0;
+//  left: 0;
+//  //background: #03081C
+//}
+
+.overlay-menu {
+  position: fixed;
+  z-index: 1800;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #03081C
+}
+

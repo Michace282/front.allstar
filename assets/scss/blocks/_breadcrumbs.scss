@@ -1,0 +1,56 @@
+.breadcrumbs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &__arrow {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 84.7%, .16);
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $blue;
+
+      svg {
+        path {
+          fill: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  &__wrap{
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    opacity: .41;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+
+    a {
+      color: inherit;
+    }
+    li{
+      margin: 0 10px;
+      position: relative;
+      &:not(:last-child){
+        &:after{
+          content: '/';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -12px;
+        }
+      }
+    }
+  }
+}

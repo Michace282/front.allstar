@@ -1,0 +1,40 @@
+.gotop {
+  position: absolute;
+  //bottom: 0;
+  bottom: 10%;
+  right: calc(50% - 607px);
+  width: 43px;
+  z-index: 100;
+  pointer-events: none;
+  cursor: pointer;
+  @include mmax(1199) {
+    display: none;
+  }
+
+  &__link {
+    width: 43px;
+    height: 43px;
+    background-color: $gold;
+    position: sticky;
+    pointer-events: all;
+    top: calc(100vh - 5rem);
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+
+    svg {
+      transform: rotate(90deg);
+      width: 10px;
+      height: 10px;
+    }
+
+    &:hover {
+      box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+    }
+
+  }
+}

@@ -1,0 +1,37 @@
+.slider {
+  &__slide {
+    .product {
+      flex: 1;
+      max-width: none;
+    }
+  }
+
+  //.agile {
+  //  &__actions {
+  //    margin-top: 10px;
+  //
+  //  }
+  //
+  //  &__dots {
+  //
+  //  }
+  //
+  //  &__dot {
+  //    margin: 0 8px;
+  //
+  //    button {
+  //      border: none;
+  //      width: 11px;
+  //      height: 11px;
+  //      background: #d6d6d6;
+  //      border-radius: 50%;
+  //    }
+  //
+  //    &--current {
+  //      button {
+  //        background: green;
+  //      }
+  //    }
+  //  }
+  //}
+}

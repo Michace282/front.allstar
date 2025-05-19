@@ -1,0 +1,199 @@
+.marker{
+  z-index: 1000;
+  pointer-events: all;
+  display: block;
+  font-weight: 700;
+  position: relative;
+  box-sizing: border-box;
+  padding: 2px 7px 2px 20px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius:  10px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  color: #0d253e;
+  box-shadow: 5px 7px 16px rgb(0 0 0 / 4%);
+  transition: all .3s;
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: grey;
+  }
+
+  &.active{
+    position: relative;
+    z-index: 20;
+    background-color: #f77100;
+    color: #fff;
+
+    &:after{
+      background-color: #FFFFFF;
+    }
+
+  }
+
+  &__inner{
+    pointer-events: none;
+    color: inherit;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+}
+.gm-ui-hover-effect{
+  opacity: 1!important;
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  position: absolute!important;
+  top: -9px!important;
+  right: -9px!important;
+  z-index: 15!important;
+  width: 33px!important;
+  height: 33px!important;
+  border-radius: 6px!important;
+  background-color: #fff!important;
+  box-shadow: 0 2px 18px rgba(0,0,0,.102382)!important;
+}
+
+.gm-ui-hover-effect>span {
+    mask-image:none!important;
+    background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M19%206.41L17.59%205%2012%2010.59%206.41%205%205%206.41%2010.59%2012%205%2017.59%206.41%2019%2012%2013.41%2017.59%2019%2019%2017.59%2013.41%2012z%22/%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22/%3E%3C/svg%3E)!important;
+    pointer-events: none;
+    display: block;
+    height: 14px!important;
+    width: 14px !important;
+    margin: 4px!important;
+}
+
+.map-card{
+  width: 249px;
+  height: 269px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 12px 12px 15px;
+  border-radius: 12px;
+  box-shadow: 4px 5px 7px rgb(0 0 0 / 8%);
+}
+
+.gm-style .gm-style-iw-c{
+  max-width: 100%!important;
+  overflow: visible;
+  padding: 0;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  transform: translate3d(-50%,-100%,0);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px 1px rgb(0 0 0 / 30%);
+  font-weight: 300;
+  font-size: 13px;
+}
+.gm-style-iw-d{
+  overflow: auto !important;
+}
+
+.gm-style-mtc,
+.gm-svpc{
+  display: none!important;
+}
+
+.gm-style img{
+  max-width: 225px;
+  object-fit: cover;
+}
+.map-card{
+  width: 249px;
+  height: 269px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 12px 12px 15px;
+  border-radius: 12px;
+  box-shadow: 8px 9px 11px rgb(0 0 0 / 8%);
+
+  &__image{
+    cursor: pointer;
+    height: 137.32px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+  }
+
+  &__title{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    color: inherit;
+    padding-left: 9px;
+  }
+
+  &__subtitle{
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 9px;
+  }
+
+  &__text{
+    font-size: 14px;
+    line-height: 16px;
+    opacity: .46;
+    padding-left: 9px;
+  }
+
+  &__footer{
+    padding-top: 11px;
+    padding-right: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    align-self: flex-end;
+  }
+
+  &__sqm{
+    font-size: 13px;
+    line-height: 15px;
+    color: #909ba6;
+    margin-right: 11px;
+  }
+
+  &__price{
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #f77100;
+
+    &:after{
+      content: "Month/";
+      position: absolute;
+      top: -12px;
+      right: 0;
+      font-size: 10px;
+      line-height: 12px;
+      opacity: .41;
+      color: #0d253e;
+      font-weight: 400;
+    }
+
+    &_month{
+      position: relative;
+    }
+  }
+}

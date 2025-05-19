@@ -1,0 +1,256 @@
+
+.view-pdf-wrapper {
+  display: flex;
+}
+
+.view-pdf {
+
+  //display: none;
+  padding: 24px 18px 0px 21px;
+
+  display: flex;
+  flex-direction: column;
+
+  .first-page {
+    //background: red;
+    position: relative;
+    height: 1005px;
+    margin-bottom: 5px;
+  }
+
+  .next-page {
+    //background: green;
+    padding: 10px 0 0px;
+    //margin-bottom: 18px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .simple__avatar {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+    }
+
+    .simple__info-title {
+      font-size: 10px;
+      line-height: 9px;
+      font-weight: bold;
+    }
+
+    .simple__info-subtitle {
+      margin-bottom: 0;
+      font-size: 10px;
+      line-height: 13px;
+    }
+
+    .contact__phone {
+      font-size: 10px;
+      line-height: 9px;
+      font-weight: 900;
+    }
+  }
+
+
+  &__title {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    &_first {
+      width: 100%;
+      .img{
+        display: flex;
+        justify-content: center;
+        img{
+          width: auto;
+          object-fit: scale-down;
+        }
+      }
+    }
+
+  }
+
+  &__img {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    .img {
+      padding: 6px;
+      overflow: hidden;
+    }
+
+    img {
+      border-radius: 4px;
+      width: 100%;
+      height: 210px;
+      overflow: hidden;
+      object-fit: scale-down;
+    }
+  }
+
+  &__description {
+    display: flex;
+    align-items: flex-start;
+    //height: 450px;
+
+    margin-bottom: 8px;
+
+    .price-text {
+      color: rgba(13, 37, 62, 0.57);
+    }
+
+    .content {
+      padding: 5px;
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      &_first {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+      }
+
+      &_second {
+
+      }
+
+      .title {
+        margin-bottom: 9px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      .text {
+        //font-size: 13px;
+        //line-height: 16px;
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+
+      .list {
+
+        padding: 0 5px;
+
+        .item {
+          font-size: 13px;
+          line-height: 16px;
+          color: rgba(13, 37, 62, 0.57);
+          display: flex;
+          justify-content: space-between;
+
+          &:not(:last-child) {
+            margin-bottom: 2px;
+          }
+
+          span {
+            display: inline-block;
+            //margin-left: auto;
+            text-align: right;
+            width: 50%;
+            color: rgba(13, 37, 62, 1);
+          }
+        }
+      }
+
+      .item-id {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+
+      .price-wrapper {
+        display: flex;
+        padding: 0 5px;
+        flex: 0 0 100%;
+        max-width: 55%;
+      }
+
+      .tags {
+        padding: 0 5px;
+
+        .tag {
+          &:after {
+            top: 8px;
+          }
+        }
+      }
+
+      .price-wrap {
+        margin-bottom: 8px;
+
+        &:not(:last-child) {
+          margin-right: auto;
+        }
+
+        .price {
+          font-weight: 600;
+
+          &.main {
+            color: #f77100;
+          }
+        }
+      }
+
+    }
+  }
+
+  &__doc-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .img {
+      width: 100%;
+    }
+  }
+
+  &__doc {
+
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    .img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 4px;
+
+    }
+
+    img {
+      border-radius: 4px;
+      height: 210px;
+      overflow: hidden;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+}

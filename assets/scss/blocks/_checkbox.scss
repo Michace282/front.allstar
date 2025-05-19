@@ -1,0 +1,53 @@
+.checkbox-list{
+  &:not(:last-child){
+    margin-bottom: 18px;
+  }
+  .checkbox{
+    line-height: normal;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    height: 16px;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+
+    &__input{
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      z-index: -1;
+    }
+  }
+
+  .checkbox__mark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+
+    &:after{
+      display: none;
+    }
+
+  }
+  .checkbox__input:checked+.checkbox__mark {
+    background-color: #f77100;
+
+  }
+  .checkbox__input:checked+.checkbox__mark:after{
+    display: block;
+    width: 8.13px;
+    height: 5px;
+    top: 6px;
+    left: 4px;
+    background-image: url("/image/ok.svg");
+    background-size: 8.13px 5px;
+    content: '';
+    position: absolute;
+  }
+}

@@ -1,0 +1,126 @@
+.information{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 27px;
+  @include mmax(767){
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+
+
+  &__navigation{
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    //margin-bottom: unset;
+    max-width: 311px;
+    box-shadow: 5px 7px 16px rgba(0, 0, 0, 0.0438156);
+    box-sizing: border-box;
+    padding: 27px 15px 32px 24px;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 38px;
+    @include mmax(767){
+      margin-bottom: 38px;
+      max-width: none;
+    }
+    * > &__link{
+      &:not(:last-child){
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  &__link{
+    color: inherit;
+    display: block;
+    font-size: 14px;
+    line-height: 27px;
+    &.nuxt-link-active{
+      color: $gold;
+      text-decoration: underline;
+    }
+  }
+
+  &__block-text{
+    width: calc(100% - 350px);
+    @include mmax(767){
+      width: auto;
+    }
+
+    * > &__header{
+      &:not(:last-child){
+        margin-bottom: 16px;
+      }
+    }
+    * > &__title{
+      &:not(:last-child){
+        margin-bottom: 16px;
+      }
+    }
+    * > &__text{
+      &:not(:last-child){
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__header{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    &_1{
+      display: none;
+      @include mmax(767){
+        width: 100%;
+        margin-bottom: 11px;
+        margin-top: 5px;
+      }
+    }
+
+    &_2{
+      @include mmax(767){
+        display: none;
+      }
+    }
+  }
+
+  &__title{
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  &__text{
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 400;
+
+    table{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    tbody{
+      width: 100%;
+    }
+    tr{
+      &:first-child{
+        td{
+          border-bottom: none;
+        }
+      }
+    }
+    td{
+      border: 1px solid $gold;
+      padding: 10px;
+    }
+    a{
+      color: $gold;
+    }
+  }
+}
+

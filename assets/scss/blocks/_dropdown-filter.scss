@@ -1,0 +1,65 @@
+.dropdown-filter{
+  cursor: pointer;
+
+
+  .add{
+    padding-left: 3px;
+    color: $gold;
+  }
+
+  .el-input__inner{
+    margin: 0 0 0 2px;
+    border: 0;
+    background: transparent;
+    display: inline-block;
+    width: calc(100% - 15px);
+  }
+
+  &__buttom{
+
+  }
+
+  &__button{
+    padding: 6px 25px 6px 18px;
+  }
+
+  &__input-label{
+    //justify-content: space-between;
+    align-items: center;
+    display: flex;
+    &:not(:last-child){
+      margin-bottom: 7px;
+    }
+  }
+
+  &__number{
+    width: 84px;
+    height: 36px;
+    padding: 5px 0 0 12px;
+    box-sizing: border-box;
+    background-color: rgba(216, 216, 216, 0.16);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__dropdown-menu {
+    width: auto;
+    min-width: 100%;
+    top: calc(100% + 18px);
+    position: absolute;
+    left: 0;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 6.5px 13px 10.5px;
+    box-shadow: 0 8px 10px rgb(0 0 0 / 6%);
+    z-index: 500;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    @include mmax(991){
+      top: 100%;
+    }
+  }
+}
